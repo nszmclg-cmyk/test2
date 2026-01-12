@@ -28,3 +28,8 @@ Route::get('/greetings', [GreetingController::class, 'index'])->name('greetings.
 Route::get('/greetings/create', [GreetingController::class, 'create'])->name('greetings.create');
 Route::post('/greetings', [GreetingController::class, 'store'])->name('greetings.store');
 Route::delete('/greetings/{greeting}', [GreetingController::class, 'destroy'])->name('greetings.destroy');
+
+// API Playground
+Route::get('/api/playground', function () {
+    return view('api.playground');
+})->name('api.playground');
